@@ -16,24 +16,26 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
         <div className="fade-in-up">
           <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-medium text-primary">
-            Trusted by 50+ Founders & Coaches
+            Personal Branding Strategist • Ghostwriter • Social Media Manager
           </span>
         </div>
         <h1 className="fade-in-up animate-delay-100 mt-8 text-5xl font-extrabold leading-tight tracking-tight md:text-7xl">
           Build your LinkedIn{" "}
-          <span className="gradient-text">Presence</span> with us
+          <span className="gradient-text">Presence</span> with Srinkhala
         </h1>
         <p className="fade-in-up animate-delay-200 mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-          We help founders and coaches build their strong personal brand on LinkedIn.
-          Content strategy, ghostwriting, and full management — so you can focus on your business.
+          Grow your personal brand and build authority in 90 days.
+          Content strategy, ghostwriting, profile optimization, and full LinkedIn management — so you can focus on your business.
         </p>
         <div className="fade-in-up animate-delay-300 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            to="/contact"
+          <a
+            href="https://calendly.com/srinkhalab1998"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-xl gradient-cyan px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:opacity-90 glow-cyan"
           >
             Book a Free Strategy Call
-          </Link>
+          </a>
           <Link
             to="/results"
             className="rounded-xl border border-border bg-secondary px-8 py-4 text-base font-semibold text-secondary-foreground transition-all hover:bg-secondary/80"

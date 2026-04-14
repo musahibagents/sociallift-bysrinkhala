@@ -3,31 +3,49 @@ const services = [
     icon: "👤",
     title: "Profile Optimization",
     description: "Complete LinkedIn profile makeover — banner, featured cards, about section, headline, and professional photo setup.",
-    price: "$299 one-time",
+    price: "$249 one-time",
   },
   {
     icon: "✍️",
     title: "LinkedIn Ghostwriting",
     description: "Expertly crafted posts that capture your voice and resonate with your target audience. 3-5 posts per week.",
-    price: "From $249/mo",
+    price: "From $199/mo",
   },
   {
     icon: "📊",
     title: "LinkedIn Management",
-    description: "Full-service management including content strategy, posting, carousel designs, engagement, and monthly analytics.",
-    price: "From $699/mo",
+    description: "Full-service management including content strategy, posting, carousel designs, engagement, and analytics.",
+    price: "From $599/mo",
   },
   {
     icon: "🎯",
     title: "Organic Lead Generation",
     description: "Targeted warm and cold outreach to your ideal audience. Build a network that drives inbound leads.",
-    price: "$399/mo",
+    price: "$349/mo",
   },
   {
     icon: "🎨",
     title: "Content Design",
     description: "Custom carousels, cheatsheets, and infographics designed to maximize engagement and shares.",
-    price: "$599/mo",
+    price: "$499/mo",
+  },
+  {
+    icon: "🧠",
+    title: "Personal Brand Coaching",
+    description: "1-on-1 coaching calls, brand positioning, content pillars, and a thought leadership strategy tailored to you.",
+    price: "$399/mo",
+  },
+  {
+    icon: "📝",
+    title: "Newsletter Ghostwriting",
+    description: "Monthly LinkedIn newsletters with topic research, SEO-optimized writing, and custom header graphics.",
+    price: "$299/mo",
+  },
+  {
+    icon: "🔍",
+    title: "LinkedIn Audit & Strategy",
+    description: "Complete profile audit, competitor analysis, content gap analysis, and a 90-day growth roadmap.",
+    price: "$149 one-time",
   },
 ];
 
@@ -42,11 +60,11 @@ export function ServicesSection() {
             <span className="gradient-text">dominate LinkedIn</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            From profile optimization to full-service management, we handle every aspect of your LinkedIn presence.
+            From profile optimization to full-service management, Srinkhala handles every aspect of your LinkedIn presence.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
             <div
               key={service.title}

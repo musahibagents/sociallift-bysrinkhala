@@ -1,7 +1,7 @@
 const stats = [
   { value: "50+", label: "Clients Served" },
   { value: "1,056%", label: "Avg. Impression Growth" },
-  { value: "151%", label: "Avg. Follower Growth" },
+  { value: "3X", label: "Growth in 12 Weeks" },
   { value: "4.9★", label: "Client Rating" },
 ];
 

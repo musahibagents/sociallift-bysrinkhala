@@ -1,5 +1,3 @@
-import { Link } from "@tanstack/react-router";
-
 export function CTASection() {
   return (
     <section className="py-24">
@@ -9,14 +7,16 @@ export function CTASection() {
             Ready to <span className="gradient-text">elevate</span> your LinkedIn?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Book a free strategy call today. Let&apos;s discuss how we can build your personal brand and generate leads on LinkedIn.
+            Book a free strategy call with Srinkhala today. Let&apos;s discuss how to build your personal brand and generate leads on LinkedIn.
           </p>
-          <Link
-            to="/contact"
+          <a
+            href="https://calendly.com/srinkhalab1998"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-flex rounded-xl gradient-cyan px-10 py-4 text-base font-semibold text-primary-foreground transition-all hover:opacity-90 glow-cyan"
           >
             Book a Free Strategy Call →
-          </Link>
+          </a>
         </div>
       </div>
     </section>
