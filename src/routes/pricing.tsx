@@ -1,33 +1,184 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Plans & Packages — Social Lift" },
-      { name: "description", content: "LinkedIn ghostwriting, management, profile optimization, and lead generation packages starting from $249/month." },
-      { property: "og:title", content: "Plans & Packages — Social Lift" },
-      { property: "og:description", content: "LinkedIn growth packages starting from $249/month." },
+      { title: "Plans & Packages — Social Lift by Srinkhala" },
+      { name: "description", content: "LinkedIn personal branding packages: ghostwriting, management, profile optimization, lead generation, and more. Starting from $199/month." },
+      { property: "og:title", content: "Plans & Packages — Social Lift by Srinkhala" },
+      { property: "og:description", content: "LinkedIn personal branding packages starting from $199/month." },
     ],
   }),
   component: PricingPage,
 });
 
 const ghostwritingPlans = [
-  { name: "Starter", posts: "3 Posts/week", price: "$249", features: ["Onboarding", "Content Strategy", "3 Posts/week", "Priority WhatsApp support"] },
-  { name: "Growth", posts: "4 Posts/week", price: "$299", popular: true, features: ["Onboarding", "Content Strategy", "4 Posts/week", "Priority WhatsApp support"] },
-  { name: "Scale", posts: "5 Posts/week", price: "$349", features: ["Onboarding", "Content Strategy", "5 Posts/week", "Priority WhatsApp support"] },
+  {
+    name: "Starter",
+    price: "$199",
+    features: [
+      "Onboarding & Brand Voice Discovery",
+      "Content Strategy",
+      "3 Posts/week",
+      "Hashtag Research",
+      "Priority WhatsApp Support",
+    ],
+  },
+  {
+    name: "Growth",
+    price: "$299",
+    popular: true,
+    features: [
+      "Onboarding & Brand Voice Discovery",
+      "Content Strategy",
+      "4 Posts/week",
+      "Hashtag & Keyword Research",
+      "1 Carousel/week",
+      "Priority WhatsApp Support",
+      "Weekly Performance Report",
+    ],
+  },
+  {
+    name: "Scale",
+    price: "$399",
+    features: [
+      "Onboarding & Brand Voice Discovery",
+      "Content Strategy",
+      "5 Posts/week",
+      "Hashtag & Keyword Research",
+      "2 Carousels/week",
+      "Priority WhatsApp Support",
+      "Weekly Performance Report",
+      "Content Calendar Access",
+    ],
+  },
 ];
 
 const managementPlans = [
-  { name: "Starter", price: "$699", features: ["Onboarding", "Content Strategy", "4 Posts/week", "5 Designs (Carousels & Infographics)", "Priority WhatsApp support", "Engagement (30/day on Post Day)", "Monthly Analytics"] },
-  { name: "Growth", price: "$749", popular: true, features: ["Onboarding", "Content Strategy", "5 Posts/week", "6 Designs (Carousels & Infographics)", "Priority WhatsApp support", "Engagement (30/day on Post Day)", "Monthly Analytics"] },
-  { name: "Scale", price: "$899", features: ["Onboarding", "Content Strategy", "6 Posts/week", "8 Designs (Carousels & Infographics)", "Priority WhatsApp support", "Engagement (30/day on Post Day)", "Monthly Analytics"] },
+  {
+    name: "Essential",
+    price: "$599",
+    features: [
+      "Onboarding & Brand Strategy",
+      "Content Strategy",
+      "4 Posts/week",
+      "4 Custom Designs (Carousels & Infographics)",
+      "Engagement (20/day on Post Days)",
+      "Monthly Analytics Report",
+      "Priority WhatsApp Support",
+    ],
+  },
+  {
+    name: "Professional",
+    price: "$799",
+    popular: true,
+    features: [
+      "Onboarding & Brand Strategy",
+      "Content Strategy",
+      "5 Posts/week",
+      "6 Custom Designs (Carousels & Infographics)",
+      "Engagement (30/day on Post Days)",
+      "Community Building & Networking",
+      "Bi-Weekly Analytics Report",
+      "Priority WhatsApp Support",
+    ],
+  },
+  {
+    name: "Premium",
+    price: "$1,099",
+    features: [
+      "Onboarding & Brand Strategy",
+      "Content Strategy",
+      "6 Posts/week",
+      "8 Custom Designs",
+      "Engagement (40/day on Post Days)",
+      "Community Building & Networking",
+      "Weekly Analytics Report",
+      "1-on-1 Monthly Strategy Call",
+      "Priority WhatsApp Support",
+    ],
+  },
 ];
 
 const addOns = [
-  { name: "Profile Optimization", price: "$299", period: "One time", features: ["2 LinkedIn Banners", "2 Featured cards", "About Section writing", "Services section writing", "3 Services Graphics", "Profile Photo with background", "LinkedIn Headline"] },
-  { name: "Organic Lead Generation", price: "$399", period: "/Month", features: ["5 days (5+5) warm and cold outreach", "Focus on your Target Audience", "Building a Network with your Target Audience for Inbound Leads", "Understanding the problem of your target audience in depth before pitching"] },
-  { name: "Content Design", price: "$599", period: "/Month", features: ["12 Custom designs (Carousel + Cheatsheet)", "Custom Designs", "Unlimited Revisions"] },
+  {
+    name: "Profile Optimization",
+    price: "$249",
+    period: "One-time",
+    features: [
+      "2 LinkedIn Banners",
+      "2 Featured Section Cards",
+      "About Section Writing",
+      "Services Section Writing",
+      "3 Services Graphics",
+      "Profile Photo with Background",
+      "LinkedIn Headline Optimization",
+      "Keyword Optimization",
+    ],
+  },
+  {
+    name: "Organic Lead Generation",
+    price: "$349",
+    period: "/Month",
+    features: [
+      "5 Days (5+5) Warm & Cold Outreach",
+      "Focus on Your Target Audience",
+      "Network Building for Inbound Leads",
+      "Audience Pain-Point Research",
+      "Custom Connection Request Messages",
+      "Follow-up Sequence",
+    ],
+  },
+  {
+    name: "Content Design Package",
+    price: "$499",
+    period: "/Month",
+    features: [
+      "12 Custom Designs",
+      "Carousels + Cheatsheets + Infographics",
+      "Brand-Aligned Design System",
+      "Unlimited Revisions",
+      "Source Files Included",
+    ],
+  },
+  {
+    name: "LinkedIn Audit & Strategy",
+    price: "$149",
+    period: "One-time",
+    features: [
+      "Complete Profile Audit",
+      "Competitor Analysis",
+      "Content Gap Analysis",
+      "90-Day Growth Roadmap",
+      "Target Audience Blueprint",
+      "30-min Strategy Call",
+    ],
+  },
+  {
+    name: "Personal Brand Coaching",
+    price: "$399",
+    period: "/Month",
+    features: [
+      "4 x 1-on-1 Coaching Calls",
+      "Brand Positioning Framework",
+      "Content Pillars Development",
+      "Thought Leadership Strategy",
+      "Engagement Playbook",
+      "Ongoing WhatsApp Support",
+    ],
+  },
+  {
+    name: "Newsletter Ghostwriting",
+    price: "$299",
+    period: "/Month",
+    features: [
+      "4 LinkedIn Newsletters/Month",
+      "Topic Research & Planning",
+      "SEO-Optimized Writing",
+      "Custom Header Graphics",
+      "Performance Tracking",
+    ],
+  },
 ];
 
 function PricingCard({ plan, period = "/Month" }: { plan: { name: string; price: string; features: string[]; popular?: boolean }; period?: string }) {
@@ -51,8 +202,10 @@ function PricingCard({ plan, period = "/Month" }: { plan: { name: string; price:
           </li>
         ))}
       </ul>
-      <Link
-        to="/contact"
+      <a
+        href="https://calendly.com/srinkhalab1998"
+        target="_blank"
+        rel="noopener noreferrer"
         className={`mt-8 block rounded-xl px-6 py-3 text-center text-sm font-semibold transition-all ${
           plan.popular
             ? "gradient-cyan text-primary-foreground glow-cyan hover:opacity-90"
@@ -60,7 +213,7 @@ function PricingCard({ plan, period = "/Month" }: { plan: { name: string; price:
         }`}
       >
         Get Started
-      </Link>
+      </a>
     </div>
   );
 }
@@ -75,13 +228,13 @@ function PricingPage() {
             Plans & <span className="gradient-text">Packages</span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Choose the perfect plan to grow your LinkedIn presence. All plans include a dedicated account manager.
+            Transparent pricing with no hidden fees. Every plan includes a dedicated personal branding strategist — Srinkhala herself.
           </p>
         </div>
 
         {/* Ghostwriting */}
         <div className="mt-20">
-          <h2 className="mb-10 text-center text-2xl font-bold text-foreground md:text-3xl">LinkedIn Ghostwriting</h2>
+          <h2 className="mb-10 text-center text-2xl font-bold text-foreground md:text-3xl">✍️ LinkedIn Ghostwriting</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {ghostwritingPlans.map((p) => <PricingCard key={p.name} plan={p} />)}
           </div>
@@ -89,7 +242,7 @@ function PricingPage() {
 
         {/* Management */}
         <div className="mt-24">
-          <h2 className="mb-10 text-center text-2xl font-bold text-foreground md:text-3xl">LinkedIn Management</h2>
+          <h2 className="mb-10 text-center text-2xl font-bold text-foreground md:text-3xl">📊 LinkedIn Management</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {managementPlans.map((p) => <PricingCard key={p.name} plan={p} />)}
           </div>
@@ -97,8 +250,8 @@ function PricingPage() {
 
         {/* Add-ons */}
         <div className="mt-24">
-          <h2 className="mb-10 text-center text-2xl font-bold text-foreground md:text-3xl">Add-On Services</h2>
-          <div className="grid gap-6 md:grid-cols-3">
+          <h2 className="mb-10 text-center text-2xl font-bold text-foreground md:text-3xl">🔧 Add-On Services</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {addOns.map((a) => (
               <div key={a.name} className="glass-card rounded-2xl p-8 hover-lift">
                 <h3 className="text-xl font-bold text-foreground">{a.name}</h3>
@@ -114,15 +267,26 @@ function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/contact"
+                <a
+                  href="https://calendly.com/srinkhalab1998"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-8 block rounded-xl border border-border bg-secondary px-6 py-3 text-center text-sm font-semibold text-secondary-foreground transition-all hover:bg-secondary/80"
                 >
                   Get Started
-                </Link>
+                </a>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Comparison Note */}
+        <div className="mt-20 glass-card rounded-3xl p-10 text-center">
+          <h3 className="text-xl font-bold text-foreground">💡 Why Choose Social Lift?</h3>
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground leading-relaxed">
+            Most LinkedIn agencies charge $1,500-$3,000/month for similar services. Freelance ghostwriters typically charge $500-$1,000/month for just 3 posts/week.
+            With Social Lift, you get agency-quality work at freelancer-friendly prices — plus a personal branding strategist who genuinely cares about your growth.
+          </p>
         </div>
       </div>
     </div>
