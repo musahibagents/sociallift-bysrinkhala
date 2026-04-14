@@ -30,7 +30,7 @@ const addOns = [
   { name: "Content Design", price: "$599", period: "/Month", features: ["12 Custom designs (Carousel + Cheatsheet)", "Custom Designs", "Unlimited Revisions"] },
 ];
 
-function PricingCard({ plan, period = "/Month" }: { plan: typeof ghostwritingPlans[0] & { popular?: boolean }; period?: string }) {
+function PricingCard({ plan, period = "/Month" }: { plan: { name: string; price: string; features: string[]; popular?: boolean }; period?: string }) {
   return (
     <div className={`glass-card rounded-2xl p-8 hover-lift relative ${plan.popular ? "ring-2 ring-primary glow-cyan" : ""}`}>
       {plan.popular && (
