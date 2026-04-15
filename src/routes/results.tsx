@@ -12,19 +12,6 @@ export const Route = createFileRoute("/results")({
   component: ResultsPage,
 });
 
-const results = [
-  {
-    client: "Client A",
-    period: "12 Days",
-    metrics: [
-      { label: "Post Impressions", before: "92", after: "19,019", growth: "1,056%" },
-      { label: "Followers", before: "89", after: "516", growth: "151%" },
-      { label: "Profile Viewers", before: "90", after: "428", growth: "375%" },
-      { label: "Search Appearances", before: "29", after: "58", growth: "100%" },
-    ],
-  },
-];
-
 const highlights = [
   { icon: "📈", value: "1,056%", label: "Impression Growth" },
   { icon: "👥", value: "151%", label: "Follower Growth" },
@@ -44,7 +31,7 @@ function ResultsPage() {
             Real <span className="gradient-text">Results</span>, Real Growth
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            See the actual growth numbers Srinkhala has delivered for clients — no fluff, just data.
+            See the actual growth numbers Srinkhala has delivered for clients. No fluff, just data.
           </p>
         </div>
 
@@ -59,37 +46,36 @@ function ResultsPage() {
           ))}
         </div>
 
-        {/* Detailed Results */}
-        {results.map((result) => (
-          <div key={result.client} className="mt-16">
-            <div className="glass-card rounded-3xl p-10 glow-cyan">
-              <div className="mb-8 text-center">
-                <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-xs font-medium text-primary">
-                  Results in {result.period}
-                </span>
-              </div>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                {result.metrics.map((m) => (
-                  <div key={m.label} className="rounded-2xl bg-background/50 p-6 text-center">
-                    <p className="text-sm text-muted-foreground">{m.label}</p>
-                    <div className="mt-3 flex items-center justify-center gap-3">
-                      <div>
-                        <p className="text-lg font-bold text-muted-foreground line-through">{m.before}</p>
-                        <p className="text-xs text-muted-foreground">Before</p>
-                      </div>
-                      <span className="text-primary text-xl">→</span>
-                      <div>
-                        <p className="text-2xl font-extrabold gradient-text">{m.after}</p>
-                        <p className="text-xs text-muted-foreground">After</p>
-                      </div>
-                    </div>
-                    <p className="mt-2 text-sm font-semibold text-primary">▲ {m.growth}</p>
-                  </div>
-                ))}
-              </div>
+        {/* Real Screenshots */}
+        <div className="mt-20">
+          <h2 className="mb-10 text-center text-2xl font-bold text-foreground md:text-3xl">
+            📊 Real Analytics <span className="gradient-text">Screenshots</span>
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="glass-card rounded-3xl p-6 glow-cyan overflow-hidden">
+              <img
+                src="/images/result-screenshot-1.png"
+                alt="LinkedIn analytics showing impression and follower growth"
+                className="w-full rounded-2xl"
+                loading="lazy"
+              />
+              <p className="mt-4 text-center text-sm text-muted-foreground">
+                Real client analytics showing massive growth in impressions and engagement
+              </p>
+            </div>
+            <div className="glass-card rounded-3xl p-6 glow-cyan overflow-hidden">
+              <img
+                src="/images/result-screenshot-2.png"
+                alt="LinkedIn analytics showing profile views and search appearances growth"
+                className="w-full rounded-2xl"
+                loading="lazy"
+              />
+              <p className="mt-4 text-center text-sm text-muted-foreground">
+                Profile views and search appearances skyrocketed in just 12 days
+              </p>
             </div>
           </div>
-        ))}
+        </div>
 
         {/* Process */}
         <div className="mt-24 text-center">
@@ -100,7 +86,7 @@ function ResultsPage() {
             {[
               { step: "01", title: "Deep Discovery", desc: "Understanding your target audience, goals, and unique voice." },
               { step: "02", title: "Strategy Design", desc: "Creating a custom content and branding strategy for your niche." },
-              { step: "03", title: "Content Execution", desc: "Writing, designing, and publishing high-impact LinkedIn content." },
+              { step: "03", title: "Content Execution", desc: "Writing, designing, and publishing high impact LinkedIn content." },
               { step: "04", title: "Growth & Optimize", desc: "Monitoring analytics, optimizing strategy, and scaling your reach." },
             ].map((s) => (
               <div key={s.step} className="glass-card rounded-2xl p-6 hover-lift">

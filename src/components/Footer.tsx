@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import logoImg from "@/assets/social-lift-logo.png";
 
 export function Footer() {
   return (
@@ -7,9 +8,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-4">
           <div>
             <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg gradient-cyan">
-                <span className="text-base font-bold text-primary-foreground">S</span>
-              </div>
+              <img src={logoImg} alt="Social Lift" className="h-8 w-8 rounded-lg object-contain" width={32} height={32} loading="lazy" />
               <span className="text-lg font-bold text-foreground">
                 Social <span className="gradient-text">Lift</span>
               </span>

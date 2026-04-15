@@ -4,9 +4,9 @@ export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
       { title: "Plans & Packages — Social Lift by Srinkhala" },
-      { name: "description", content: "LinkedIn personal branding packages: ghostwriting, management, profile optimization, lead generation, and more. Starting from $199/month." },
+      { name: "description", content: "LinkedIn personal branding packages: ghostwriting, management, profile optimization, lead generation, and more." },
       { property: "og:title", content: "Plans & Packages — Social Lift by Srinkhala" },
-      { property: "og:description", content: "LinkedIn personal branding packages starting from $199/month." },
+      { property: "og:description", content: "LinkedIn personal branding packages by Srinkhala." },
     ],
   }),
   component: PricingPage,
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/pricing")({
 const ghostwritingPlans = [
   {
     name: "Starter",
-    price: "$199",
+    price: "$299",
     features: [
       "Onboarding & Brand Voice Discovery",
       "Content Strategy",
@@ -26,7 +26,7 @@ const ghostwritingPlans = [
   },
   {
     name: "Growth",
-    price: "$299",
+    price: "$399",
     popular: true,
     features: [
       "Onboarding & Brand Voice Discovery",
@@ -57,7 +57,7 @@ const ghostwritingPlans = [
 const managementPlans = [
   {
     name: "Essential",
-    price: "$599",
+    price: "$699",
     features: [
       "Onboarding & Brand Strategy",
       "Content Strategy",
@@ -70,7 +70,7 @@ const managementPlans = [
   },
   {
     name: "Professional",
-    price: "$799",
+    price: "$819",
     popular: true,
     features: [
       "Onboarding & Brand Strategy",
@@ -94,7 +94,7 @@ const managementPlans = [
       "Engagement (40/day on Post Days)",
       "Community Building & Networking",
       "Weekly Analytics Report",
-      "1-on-1 Monthly Strategy Call",
+      "1 on 1 Monthly Strategy Call",
       "Priority WhatsApp Support",
     ],
   },
@@ -118,25 +118,26 @@ const addOns = [
   },
   {
     name: "Organic Lead Generation",
-    price: "$349",
-    period: "/Month",
+    price: "$449",
+    period: "/Month + 15% commission on closing",
     features: [
       "5 Days (5+5) Warm & Cold Outreach",
       "Focus on Your Target Audience",
       "Network Building for Inbound Leads",
-      "Audience Pain-Point Research",
+      "Audience Pain Point Research",
       "Custom Connection Request Messages",
-      "Follow-up Sequence",
+      "Follow up Sequence",
+      "15% Commission on Every Deal Closed",
     ],
   },
   {
     name: "Content Design Package",
-    price: "$499",
+    price: "$599",
     period: "/Month",
     features: [
       "12 Custom Designs",
       "Carousels + Cheatsheets + Infographics",
-      "Brand-Aligned Design System",
+      "Brand Aligned Design System",
       "Unlimited Revisions",
       "Source Files Included",
     ],
@@ -149,9 +150,9 @@ const addOns = [
       "Complete Profile Audit",
       "Competitor Analysis",
       "Content Gap Analysis",
-      "90-Day Growth Roadmap",
+      "90 Day Growth Roadmap",
       "Target Audience Blueprint",
-      "30-min Strategy Call",
+      "30 min Strategy Call",
     ],
   },
   {
@@ -159,7 +160,7 @@ const addOns = [
     price: "$399",
     period: "/Month",
     features: [
-      "4 x 1-on-1 Coaching Calls",
+      "4 x 1 on 1 Coaching Calls",
       "Brand Positioning Framework",
       "Content Pillars Development",
       "Thought Leadership Strategy",
@@ -174,7 +175,7 @@ const addOns = [
     features: [
       "4 LinkedIn Newsletters/Month",
       "Topic Research & Planning",
-      "SEO-Optimized Writing",
+      "SEO Optimized Writing",
       "Custom Header Graphics",
       "Performance Tracking",
     ],
@@ -228,7 +229,7 @@ function PricingPage() {
             Plans & <span className="gradient-text">Packages</span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Transparent pricing with no hidden fees. Every plan includes a dedicated personal branding strategist — Srinkhala herself.
+            Transparent pricing with no hidden fees. Every plan includes a dedicated personal branding strategist, Srinkhala herself.
           </p>
         </div>
 
@@ -250,7 +251,7 @@ function PricingPage() {
 
         {/* Add-ons */}
         <div className="mt-24">
-          <h2 className="mb-10 text-center text-2xl font-bold text-foreground md:text-3xl">🔧 Add-On Services</h2>
+          <h2 className="mb-10 text-center text-2xl font-bold text-foreground md:text-3xl">🔧 Add On Services</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {addOns.map((a) => (
               <div key={a.name} className="glass-card rounded-2xl p-8 hover-lift">
@@ -284,8 +285,8 @@ function PricingPage() {
         <div className="mt-20 glass-card rounded-3xl p-10 text-center">
           <h3 className="text-xl font-bold text-foreground">💡 Why Choose Social Lift?</h3>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground leading-relaxed">
-            Most LinkedIn agencies charge $1,500-$3,000/month for similar services. Freelance ghostwriters typically charge $500-$1,000/month for just 3 posts/week.
-            With Social Lift, you get agency-quality work at freelancer-friendly prices — plus a personal branding strategist who genuinely cares about your growth.
+            Most LinkedIn agencies charge $1,500 to $3,000/month for similar services. Freelance ghostwriters typically charge $500 to $1,000/month for just 3 posts/week.
+            With Social Lift, you get agency quality work at freelancer friendly prices, plus a personal branding strategist who genuinely cares about your growth.
           </p>
         </div>
       </div>
