@@ -25,7 +25,7 @@ export function HeroSection() {
         </h1>
         <p className="fade-in-up animate-delay-200 mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
           Grow your personal brand and build authority in 90 days.
-          Content strategy, ghostwriting, profile optimization, and full LinkedIn management — so you can focus on your business.
+          Content strategy, ghostwriting, profile optimization, and full LinkedIn management so you can focus on your business.
         </p>
         <div className="fade-in-up animate-delay-300 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a

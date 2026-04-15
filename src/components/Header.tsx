@@ -1,5 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
+import logoImg from "@/assets/social-lift-logo.png";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -16,9 +17,7 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 glass-card">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg gradient-cyan">
-            <span className="text-lg font-bold text-primary-foreground">S</span>
-          </div>
+          <img src={logoImg} alt="Social Lift" className="h-9 w-9 rounded-lg object-contain" width={36} height={36} />
           <span className="text-xl font-bold text-foreground">
             Social <span className="gradient-text">Lift</span>
           </span>

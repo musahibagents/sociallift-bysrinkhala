@@ -118,6 +118,25 @@ export function TestimonialsSection() {
           </div>
         </div>
 
+        {/* Motivating Hook */}
+        <div className="mt-20 glass-card rounded-3xl p-12 text-center glow-cyan">
+          <h3 className="text-3xl font-extrabold text-foreground md:text-4xl">
+            Your competitors are already{" "}
+            <span className="gradient-text">building their brand</span> on LinkedIn.
+          </h3>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+            Every day you wait is a day your ideal clients find someone else. The best time to start was yesterday. The second best time is right now.
+          </p>
+          <a
+            href="https://calendly.com/srinkhalab1998"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex rounded-xl gradient-cyan px-10 py-4 text-base font-semibold text-primary-foreground transition-all hover:opacity-90 glow-cyan"
+          >
+            Stop Waiting. Start Growing →
+          </a>
+        </div>
+
         {/* Written Testimonials */}
         <div className="mt-20">
           <h3 className="mb-8 text-center text-xl font-bold text-foreground">💬 Client Reviews</h3>
@@ -137,6 +156,17 @@ export function TestimonialsSection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Bottom Hook */}
+        <div className="mt-16 text-center">
+          <p className="text-xl font-bold text-foreground">
+            These clients took the leap.{" "}
+            <span className="gradient-text">Now it's your turn.</span>
+          </p>
+          <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
+            Join 50+ founders and coaches who trusted Srinkhala to transform their LinkedIn into a lead generating machine.
+          </p>
         </div>
       </div>
     </section>

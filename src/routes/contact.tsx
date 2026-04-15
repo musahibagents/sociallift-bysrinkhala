@@ -26,12 +26,30 @@ function ContactPage() {
           </p>
         </div>
 
+        {/* Srinkhala Profile Card */}
+        <div className="mt-12 flex justify-center">
+          <div className="glass-card rounded-3xl p-8 flex flex-col items-center text-center max-w-sm">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4D03AQFr80C4YBIXrg/profile-displayphoto-shrink_400_400/B4DZaHw6bTHYAg-/0/1746104771329?e=1751500800&v=beta&t=vXnxw9O5vZxXibEd3i2C_QaXl9aF_hCh_UpGIolYz4U"
+              alt="Srinkhala Baranwal"
+              className="h-28 w-28 rounded-full object-cover ring-4 ring-primary/30"
+              width={112}
+              height={112}
+            />
+            <h2 className="mt-4 text-xl font-bold text-foreground">Srinkhala Baranwal</h2>
+            <p className="mt-1 text-sm text-primary font-medium">Personal Branding Strategist</p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Helping founders and coaches build authority on LinkedIn with strategy, ghostwriting, and full management.
+            </p>
+          </div>
+        </div>
+
         <div className="mt-12 grid gap-8 md:grid-cols-2">
-          {/* Calendly Embed */}
+          {/* Calendly */}
           <div className="glass-card rounded-3xl p-8">
             <h2 className="mb-6 text-2xl font-bold text-foreground">📅 Book a Free Call</h2>
             <p className="mb-6 text-sm text-muted-foreground">
-              Schedule a 30-minute strategy call to discuss your LinkedIn goals and how I can help you grow.
+              Schedule a 30 minute strategy call to discuss your LinkedIn goals and how I can help you grow.
             </p>
             <a
               href="https://calendly.com/srinkhalab1998"
@@ -69,18 +87,6 @@ function ContactPage() {
                   linkedin.com/in/srinkhalabaranwal
                 </a>
               </div>
-              <div>
-                <p className="text-sm font-medium text-foreground mb-2">Calendly</p>
-                <a
-                  href="https://calendly.com/srinkhalab1998"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 rounded-xl border border-border bg-secondary p-4 text-sm text-foreground transition-colors hover:bg-secondary/80"
-                >
-                  <span className="text-xl">📅</span>
-                  calendly.com/srinkhalab1998
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -98,7 +104,7 @@ function ContactPage() {
             </div>
             <div>
               <span className="text-3xl">🎯</span>
-              <h3 className="mt-3 font-semibold text-foreground">Strategy-First Approach</h3>
+              <h3 className="mt-3 font-semibold text-foreground">Strategy First Approach</h3>
               <p className="mt-2 text-sm text-muted-foreground">Every piece of content is aligned with your brand goals.</p>
             </div>
             <div>
