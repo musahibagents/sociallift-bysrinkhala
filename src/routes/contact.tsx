@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import srinkhalaImg from "@/assets/srinkhala-profile.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -30,7 +31,7 @@ function ContactPage() {
         <div className="mt-12 flex justify-center">
           <div className="glass-card rounded-3xl p-8 flex flex-col items-center text-center max-w-sm">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQFr80C4YBIXrg/profile-displayphoto-shrink_400_400/B4DZaHw6bTHYAg-/0/1746104771329?e=1751500800&v=beta&t=vXnxw9O5vZxXibEd3i2C_QaXl9aF_hCh_UpGIolYz4U"
+              src={srinkhalaImg}
               alt="Srinkhala Baranwal"
               className="h-28 w-28 rounded-full object-cover ring-4 ring-primary/30"
               width={112}
