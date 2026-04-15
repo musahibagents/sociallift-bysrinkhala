@@ -36,6 +36,10 @@ export const Route = createRootRoute({
       { name: "author", content: "Srinkhala Baranwal" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Social Lift by Srinkhala — Build Your LinkedIn Presence" },
+      { name: "twitter:title", content: "Social Lift by Srinkhala — Build Your LinkedIn Presence" },
+      { property: "og:description", content: "Srinkhala helps founders and coaches build their strong personal brand on LinkedIn." },
+      { name: "twitter:description", content: "Srinkhala helps founders and coaches build their strong personal brand on LinkedIn." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
