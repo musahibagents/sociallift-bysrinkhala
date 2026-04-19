@@ -9,6 +9,15 @@ import post3 from "@/assets/post-3.png";
 import post4 from "@/assets/post-4.png";
 import post5 from "@/assets/post-5.png";
 import post6 from "@/assets/post-6.png";
+import client2Discovery from "@/assets/client2-discovery.png";
+import client2Engagements from "@/assets/client2-engagements.png";
+import client2Cumulative from "@/assets/client2-cumulative.png";
+import mariannePost1 from "@/assets/marianne-post-1.png";
+import mariannePost2 from "@/assets/marianne-post-2.png";
+import mariannePost3 from "@/assets/marianne-post-3.png";
+import client3ContentPerf from "@/assets/client3-content-perf.png";
+import client3Followers from "@/assets/client3-followers.png";
+import client3ContentPerf2 from "@/assets/client3-content-perf-2.png";
 
 export const Route = createFileRoute("/results")({
   head: () => ({
@@ -189,6 +198,91 @@ function ResultsPage() {
               />
               <p className="mt-4 text-center text-sm text-muted-foreground">
                 Newsletter article views up <span className="font-semibold text-foreground">3,150%</span> in 7 days.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Client 2 — Marianne */}
+        <div className="mt-24">
+          <div className="text-center">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary">Client Spotlight</span>
+            <h2 className="mt-3 text-2xl font-bold text-foreground md:text-4xl">
+              Storytelling That <span className="gradient-text">Scales</span>
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+              Marianne van Groeningen — personal narrative posts driving tens of thousands of impressions per piece.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <div className="glass-card rounded-2xl p-5 hover-lift">
+              <img src={client2Discovery} alt="Discovery — 35,615 impressions, 12,843 members reached" className="w-full rounded-xl border border-border" loading="lazy" />
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                <span className="font-semibold gradient-text">35,615</span> impressions · <span className="font-semibold gradient-text">+73.2%</span> reach
+              </p>
+            </div>
+            <div className="glass-card rounded-2xl p-5 hover-lift">
+              <img src={client2Engagements} alt="Content performance — 4,951 engagements, 29.4% growth" className="w-full rounded-xl border border-border" loading="lazy" />
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                <span className="font-semibold gradient-text">4,951</span> engagements · <span className="font-semibold gradient-text">+29.4%</span> in 90 days
+              </p>
+            </div>
+            <div className="glass-card rounded-2xl p-5 hover-lift">
+              <img src={client2Cumulative} alt="Cumulative content performance — 97,575 impressions over 365 days" className="w-full rounded-xl border border-border" loading="lazy" />
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                <span className="font-semibold gradient-text">97,575</span> cumulative impressions
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {[
+              { src: mariannePost1, impressions: "28,719", reactions: "99", comments: "21" },
+              { src: mariannePost2, impressions: "10,273", reactions: "96", comments: "41" },
+              { src: mariannePost3, impressions: "4,772", reactions: "99", comments: "27" },
+            ].map((p, i) => (
+              <div key={i} className="glass-card rounded-2xl p-4 hover-lift">
+                <img src={p.src} alt={`Marianne post — ${p.impressions} impressions`} className="w-full rounded-xl border border-border" loading="lazy" />
+                <div className="mt-3 grid grid-cols-3 gap-2 text-center">
+                  <div><p className="text-base font-extrabold gradient-text">{p.impressions}</p><p className="text-[10px] uppercase tracking-wider text-muted-foreground">Impressions</p></div>
+                  <div><p className="text-base font-extrabold gradient-text">{p.reactions}</p><p className="text-[10px] uppercase tracking-wider text-muted-foreground">Reactions</p></div>
+                  <div><p className="text-base font-extrabold gradient-text">{p.comments}</p><p className="text-[10px] uppercase tracking-wider text-muted-foreground">Comments</p></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Client 3 — Long term */}
+        <div className="mt-24">
+          <div className="text-center">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary">Long Term Compounding</span>
+            <h2 className="mt-3 text-2xl font-bold text-foreground md:text-4xl">
+              The Power of <span className="gradient-text">Consistency</span>
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+              199,450 impressions over a year. 4,105 followers. Real audience built post by post.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <div className="glass-card rounded-2xl p-5 hover-lift">
+              <img src={client3ContentPerf} alt="Content performance — 199,450 impressions over a year" className="w-full rounded-xl border border-border" loading="lazy" />
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                <span className="font-semibold gradient-text">199,450</span> impressions over 12 months
+              </p>
+            </div>
+            <div className="glass-card rounded-2xl p-5 hover-lift">
+              <img src={client3Followers} alt="4,105 total followers, 20% growth in 90 days" className="w-full rounded-xl border border-border" loading="lazy" />
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                <span className="font-semibold gradient-text">4,105</span> followers · <span className="font-semibold gradient-text">+20%</span> in 90 days
+              </p>
+            </div>
+            <div className="glass-card rounded-2xl p-5 hover-lift">
+              <img src={client3ContentPerf2} alt="Content performance — 59,953 impressions, 203% growth vs prior 90 days" className="w-full rounded-xl border border-border" loading="lazy" />
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                <span className="font-semibold gradient-text">59,953</span> impressions · <span className="font-semibold gradient-text">+203%</span> in 90 days
               </p>
             </div>
           </div>
