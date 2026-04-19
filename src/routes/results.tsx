@@ -97,7 +97,7 @@ function ResultsPage() {
               <img
                 src={resultBefore}
                 alt="LinkedIn analytics before working with Srinkhala — 92 impressions, 89 followers"
-                className="w-full rounded-2xl border border-border"
+                className="w-full rounded-2xl"
                 loading="lazy"
               />
               <p className="mt-4 text-center text-sm text-muted-foreground">
@@ -115,7 +115,7 @@ function ResultsPage() {
               <img
                 src={resultAfter}
                 alt="LinkedIn analytics 12 days after working with Srinkhala — 19,019 impressions, 516 followers"
-                className="w-full rounded-2xl border border-border"
+                className="w-full rounded-2xl"
                 loading="lazy"
               />
               <p className="mt-4 text-center text-sm font-semibold gradient-text">
@@ -143,7 +143,7 @@ function ResultsPage() {
                 <img
                   src={p.src}
                   alt={`Client top post with ${p.impressions} impressions`}
-                  className="w-full rounded-xl border border-border"
+                  className="w-full rounded-xl"
                   loading="lazy"
                 />
                 <div className="mt-4 grid grid-cols-3 gap-2 text-center">
@@ -182,7 +182,7 @@ function ResultsPage() {
               <img
                 src={resultContentPerf}
                 alt="Content performance — 35,529 impressions over 28 days, 36.7% growth"
-                className="w-full rounded-2xl border border-border"
+                className="w-full rounded-2xl"
                 loading="lazy"
               />
               <p className="mt-4 text-center text-sm text-muted-foreground">
@@ -193,7 +193,7 @@ function ResultsPage() {
               <img
                 src={resultNewsletter}
                 alt="Analytics with newsletter growth — 8,013 impressions, 5,211 followers, 3,150% newsletter article views"
-                className="w-full rounded-2xl border border-border"
+                className="w-full rounded-2xl"
                 loading="lazy"
               />
               <p className="mt-4 text-center text-sm text-muted-foreground">
@@ -217,19 +217,19 @@ function ResultsPage() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client2Discovery} alt="Discovery — 35,615 impressions, 12,843 members reached" className="w-full rounded-xl border border-border" loading="lazy" />
+              <img src={client2Discovery} alt="Discovery — 35,615 impressions, 12,843 members reached" className="w-full rounded-xl" loading="lazy" />
               <p className="mt-3 text-center text-xs text-muted-foreground">
                 <span className="font-semibold gradient-text">35,615</span> impressions · <span className="font-semibold gradient-text">+73.2%</span> reach
               </p>
             </div>
             <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client2Engagements} alt="Content performance — 4,951 engagements, 29.4% growth" className="w-full rounded-xl border border-border" loading="lazy" />
+              <img src={client2Engagements} alt="Content performance — 4,951 engagements, 29.4% growth" className="w-full rounded-xl" loading="lazy" />
               <p className="mt-3 text-center text-xs text-muted-foreground">
                 <span className="font-semibold gradient-text">4,951</span> engagements · <span className="font-semibold gradient-text">+29.4%</span> in 90 days
               </p>
             </div>
             <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client2Cumulative} alt="Cumulative content performance — 97,575 impressions over 365 days" className="w-full rounded-xl border border-border" loading="lazy" />
+              <img src={client2Cumulative} alt="Cumulative content performance — 97,575 impressions over 365 days" className="w-full rounded-xl" loading="lazy" />
               <p className="mt-3 text-center text-xs text-muted-foreground">
                 <span className="font-semibold gradient-text">97,575</span> cumulative impressions
               </p>
@@ -243,7 +243,7 @@ function ResultsPage() {
               { src: mariannePost3, impressions: "4,772", reactions: "99", comments: "27" },
             ].map((p, i) => (
               <div key={i} className="glass-card rounded-2xl p-4 hover-lift">
-                <img src={p.src} alt={`Marianne post — ${p.impressions} impressions`} className="w-full rounded-xl border border-border" loading="lazy" />
+                <img src={p.src} alt={`Marianne post — ${p.impressions} impressions`} className="w-full rounded-xl" loading="lazy" />
                 <div className="mt-3 grid grid-cols-3 gap-2 text-center">
                   <div><p className="text-base font-extrabold gradient-text">{p.impressions}</p><p className="text-[10px] uppercase tracking-wider text-muted-foreground">Impressions</p></div>
                   <div><p className="text-base font-extrabold gradient-text">{p.reactions}</p><p className="text-[10px] uppercase tracking-wider text-muted-foreground">Reactions</p></div>
@@ -268,19 +268,19 @@ function ResultsPage() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client3ContentPerf} alt="Content performance — 199,450 impressions over a year" className="w-full rounded-xl border border-border" loading="lazy" />
+              <img src={client3ContentPerf} alt="Content performance — 199,450 impressions over a year" className="w-full rounded-xl" loading="lazy" />
               <p className="mt-3 text-center text-xs text-muted-foreground">
                 <span className="font-semibold gradient-text">199,450</span> impressions over 12 months
               </p>
             </div>
             <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client3Followers} alt="4,105 total followers, 20% growth in 90 days" className="w-full rounded-xl border border-border" loading="lazy" />
+              <img src={client3Followers} alt="4,105 total followers, 20% growth in 90 days" className="w-full rounded-xl" loading="lazy" />
               <p className="mt-3 text-center text-xs text-muted-foreground">
                 <span className="font-semibold gradient-text">4,105</span> followers · <span className="font-semibold gradient-text">+20%</span> in 90 days
               </p>
             </div>
             <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client3ContentPerf2} alt="Content performance — 59,953 impressions, 203% growth vs prior 90 days" className="w-full rounded-xl border border-border" loading="lazy" />
+              <img src={client3ContentPerf2} alt="Content performance — 59,953 impressions, 203% growth vs prior 90 days" className="w-full rounded-xl" loading="lazy" />
               <p className="mt-3 text-center text-xs text-muted-foreground">
                 <span className="font-semibold gradient-text">59,953</span> impressions · <span className="font-semibold gradient-text">+203%</span> in 90 days
               </p>
