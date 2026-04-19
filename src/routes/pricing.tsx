@@ -40,7 +40,7 @@ const ghostwritingPlans = [
   },
   {
     name: "Scale",
-    price: "$399",
+    price: "$499",
     features: [
       "Onboarding & Brand Voice Discovery",
       "Content Strategy",
@@ -178,6 +178,20 @@ const addOns = [
       "SEO Optimized Writing",
       "Custom Header Graphics",
       "Performance Tracking",
+    ],
+  },
+  {
+    name: "LinkedIn Engagement",
+    price: "$250",
+    period: "/Month",
+    features: [
+      "30 Thoughtful Comments/Month",
+      "Finding the Right Audience for Engagement",
+      "Targeted Engagement on Ideal Client Posts",
+      "Strategic Commenting to Boost Visibility",
+      "Engagement with Industry Leaders & Prospects",
+      "Monthly Engagement Analytics Report",
+      "24 Hour WhatsApp Support",
     ],
   },
 ];
