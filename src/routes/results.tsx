@@ -1,12 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
+import resultBefore from "@/assets/result-before.png";
+import resultAfter from "@/assets/result-after.png";
+import resultContentPerf from "@/assets/result-content-perf.png";
+import resultNewsletter from "@/assets/result-newsletter.png";
+import post1 from "@/assets/post-1.png";
+import post2 from "@/assets/post-2.png";
+import post3 from "@/assets/post-3.png";
+import post4 from "@/assets/post-4.png";
+import post5 from "@/assets/post-5.png";
+import post6 from "@/assets/post-6.png";
 
 export const Route = createFileRoute("/results")({
   head: () => ({
     meta: [
       { title: "Results — Social Lift by Srinkhala" },
-      { name: "description", content: "See how Srinkhala helped clients grow their LinkedIn impressions by 1,056% and followers by 151% in just 12 days." },
+      { name: "description", content: "See real LinkedIn analytics — before vs after working with Srinkhala. 1,056% impression growth in just 12 days, plus client top posts." },
       { property: "og:title", content: "Results — Social Lift by Srinkhala" },
-      { property: "og:description", content: "Real results: 1,056% impression growth in 12 days." },
+      { property: "og:description", content: "Real before/after LinkedIn analytics and top performing client posts." },
     ],
   }),
   component: ResultsPage,
@@ -19,6 +29,15 @@ const highlights = [
   { icon: "🔍", value: "100%", label: "Search Appearance Growth" },
   { icon: "🕐", value: "12 Days", label: "Time to Results" },
   { icon: "⭐", value: "3X", label: "Avg Growth in 12 Weeks" },
+];
+
+const topPosts = [
+  { src: post1, impressions: "3,346", reactions: "303", comments: "48" },
+  { src: post2, impressions: "3,501", reactions: "289", comments: "46" },
+  { src: post3, impressions: "63,967", reactions: "356", comments: "64" },
+  { src: post4, impressions: "18,435", reactions: "308", comments: "76" },
+  { src: post5, impressions: "2,207", reactions: "243", comments: "45" },
+  { src: post6, impressions: "3,930", reactions: "376", comments: "133" },
 ];
 
 function ResultsPage() {
@@ -46,32 +65,130 @@ function ResultsPage() {
           ))}
         </div>
 
-        {/* Real Screenshots */}
-        <div className="mt-20">
-          <h2 className="mb-10 text-center text-2xl font-bold text-foreground md:text-3xl">
-            📊 Real Analytics <span className="gradient-text">Screenshots</span>
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="glass-card rounded-3xl p-6 glow-cyan overflow-hidden">
+        {/* Before vs After */}
+        <div className="mt-24">
+          <div className="text-center">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary">The 12 Day Transformation</span>
+            <h2 className="mt-3 text-2xl font-bold text-foreground md:text-4xl">
+              Before vs <span className="gradient-text">After</span>
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+              Same client. Same profile. 12 days of working with Srinkhala. Real LinkedIn analytics, untouched.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
+            <div className="glass-card rounded-3xl p-6 hover-lift">
+              <div className="mb-4 flex items-center justify-between">
+                <span className="rounded-full bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Before
+                </span>
+                <span className="text-xs text-muted-foreground">Thursday, September 28</span>
+              </div>
               <img
-                src="/images/result-screenshot-1.png"
-                alt="LinkedIn analytics showing impression and follower growth"
-                className="w-full rounded-2xl"
+                src={resultBefore}
+                alt="LinkedIn analytics before working with Srinkhala — 92 impressions, 89 followers"
+                className="w-full rounded-2xl border border-border"
                 loading="lazy"
               />
               <p className="mt-4 text-center text-sm text-muted-foreground">
-                Real client analytics showing massive growth in impressions and engagement
+                Starting point — modest reach, low impressions, limited visibility.
               </p>
             </div>
-            <div className="glass-card rounded-3xl p-6 glow-cyan overflow-hidden">
+
+            <div className="glass-card rounded-3xl p-6 glow-cyan hover-lift">
+              <div className="mb-4 flex items-center justify-between">
+                <span className="rounded-full gradient-cyan px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
+                  After 12 Days
+                </span>
+                <span className="text-xs text-muted-foreground">Monday, October 9</span>
+              </div>
               <img
-                src="/images/result-screenshot-2.png"
-                alt="LinkedIn analytics showing profile views and search appearances growth"
-                className="w-full rounded-2xl"
+                src={resultAfter}
+                alt="LinkedIn analytics 12 days after working with Srinkhala — 19,019 impressions, 516 followers"
+                className="w-full rounded-2xl border border-border"
+                loading="lazy"
+              />
+              <p className="mt-4 text-center text-sm font-semibold gradient-text">
+                19,019 impressions • 516 followers • 1,056% growth
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Top Client Posts */}
+        <div className="mt-24">
+          <div className="text-center">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary">Viral Worthy Content</span>
+            <h2 className="mt-3 text-2xl font-bold text-foreground md:text-4xl">
+              Client's <span className="gradient-text">Top Posts</span>
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+              Posts crafted by Srinkhala that drove thousands of impressions, hundreds of reactions, and real conversations.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {topPosts.map((p, i) => (
+              <div key={i} className="glass-card rounded-2xl p-4 hover-lift">
+                <img
+                  src={p.src}
+                  alt={`Client top post with ${p.impressions} impressions`}
+                  className="w-full rounded-xl border border-border"
+                  loading="lazy"
+                />
+                <div className="mt-4 grid grid-cols-3 gap-2 text-center">
+                  <div>
+                    <p className="text-base font-extrabold gradient-text">{p.impressions}</p>
+                    <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Impressions</p>
+                  </div>
+                  <div>
+                    <p className="text-base font-extrabold gradient-text">{p.reactions}</p>
+                    <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Reactions</p>
+                  </div>
+                  <div>
+                    <p className="text-base font-extrabold gradient-text">{p.comments}</p>
+                    <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Comments</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Sustained Growth */}
+        <div className="mt-24">
+          <div className="text-center">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary">Sustained Growth</span>
+            <h2 className="mt-3 text-2xl font-bold text-foreground md:text-4xl">
+              Beyond the First <span className="gradient-text">Spike</span>
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+              Consistent content. Consistent results. Long term performance and newsletter momentum.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
+            <div className="glass-card rounded-3xl p-6 hover-lift">
+              <img
+                src={resultContentPerf}
+                alt="Content performance — 35,529 impressions over 28 days, 36.7% growth"
+                className="w-full rounded-2xl border border-border"
                 loading="lazy"
               />
               <p className="mt-4 text-center text-sm text-muted-foreground">
-                Profile views and search appearances skyrocketed in just 12 days
+                35,529 impressions in 28 days — <span className="font-semibold text-foreground">+36.7%</span> vs prior month.
+              </p>
+            </div>
+            <div className="glass-card rounded-3xl p-6 hover-lift">
+              <img
+                src={resultNewsletter}
+                alt="Analytics with newsletter growth — 8,013 impressions, 5,211 followers, 3,150% newsletter article views"
+                className="w-full rounded-2xl border border-border"
+                loading="lazy"
+              />
+              <p className="mt-4 text-center text-sm text-muted-foreground">
+                Newsletter article views up <span className="font-semibold text-foreground">3,150%</span> in 7 days.
               </p>
             </div>
           </div>
