@@ -9,6 +9,15 @@ import post3 from "@/assets/post-3.png";
 import post4 from "@/assets/post-4.png";
 import post5 from "@/assets/post-5.png";
 import post6 from "@/assets/post-6.png";
+import client2Discovery from "@/assets/client2-discovery.png";
+import client2Engagements from "@/assets/client2-engagements.png";
+import client2Cumulative from "@/assets/client2-cumulative.png";
+import mariannePost1 from "@/assets/marianne-post-1.png";
+import mariannePost2 from "@/assets/marianne-post-2.png";
+import mariannePost3 from "@/assets/marianne-post-3.png";
+import client3ContentPerf from "@/assets/client3-content-perf.png";
+import client3Followers from "@/assets/client3-followers.png";
+import client3ContentPerf2 from "@/assets/client3-content-perf-2.png";
 
 export const Route = createFileRoute("/results")({
   head: () => ({
