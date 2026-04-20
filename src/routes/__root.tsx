@@ -40,6 +40,8 @@ export const Route = createRootRoute({
       { name: "twitter:title", content: "Social Lift by Srinkhala — Build Your LinkedIn Presence" },
       { property: "og:description", content: "Srinkhala helps founders and coaches build their strong personal brand on LinkedIn." },
       { name: "twitter:description", content: "Srinkhala helps founders and coaches build their strong personal brand on LinkedIn." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0570be1e-2af9-4911-a15b-60a288990bf9/id-preview-5d33bd6d--879b710d-158c-43ed-b371-13f8883a58fc.lovable.app-1776674125753.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0570be1e-2af9-4911-a15b-60a288990bf9/id-preview-5d33bd6d--879b710d-158c-43ed-b371-13f8883a58fc.lovable.app-1776674125753.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
