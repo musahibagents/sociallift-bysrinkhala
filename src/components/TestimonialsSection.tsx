@@ -3,17 +3,17 @@ import { useState, useRef } from "react";
 const videoTestimonials = [
   {
     name: "Kiirti Kalyan",
-    role: "Client",
+    role: "Tarot Consultant since 2010 | Your Strategic Partner & Secret Superpower",
     video: "/videos/kiirti-testimonial.mp4",
   },
   {
-    name: "Kellie",
-    role: "Client",
+    name: "Ms. Kellie Michele Rhymes",
+    role: "Women's Hair Loss Support Coach | Helping Women with Alopecia Reclaim Confidence & Welcome Their Beauty",
     video: "/videos/kellie-testimonial.mp4",
   },
   {
     name: "Marco Grüter",
-    role: "Client",
+    role: "Helping overloaded entrepreneurs eliminate themselves as the bottleneck | Escape The Success Trap | Scale • Step back • Exit on your terms",
     video: "/videos/marco-testimonial.mp4",
   },
 ];
