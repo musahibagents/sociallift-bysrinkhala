@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import resultBefore from "@/assets/result-before.png";
-import resultAfter from "@/assets/result-after.png";
-import resultContentPerf from "@/assets/result-content-perf.png";
-import resultNewsletter from "@/assets/result-newsletter.png";
+
+const resultBefore = "/result-before.png";
+const resultAfter = "/result-after.png";
+const resultContentPerf = "/result-content-perf.png";
+const resultNewsletter = "/result-newsletter.png";
 import post1 from "@/assets/post-1.png";
 import post2 from "@/assets/post-2.png";
 import post3 from "@/assets/post-3.png";
