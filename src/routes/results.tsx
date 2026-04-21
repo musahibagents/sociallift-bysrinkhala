@@ -16,6 +16,10 @@ import analytics5 from "@/assets/analytics-5.png";
 import analytics6 from "@/assets/analytics-6.png";
 import analytics7 from "@/assets/analytics-7.png";
 import analytics8 from "@/assets/analytics-8.png";
+import ba1Before from "@/assets/before-after-1-before.png";
+import ba1After from "@/assets/before-after-1-after.png";
+import ba2Before from "@/assets/before-after-2-before.png";
+import ba2After from "@/assets/before-after-2-after.png";
 
 
 export const Route = createFileRoute("/results")({
@@ -49,9 +53,33 @@ const analyticsScreens = [
   { src: analytics4, alt: "Content performance — 4,951 engagements, +29.4% vs. prior 90 days" },
   { src: analytics8, alt: "Content performance — 59,953 impressions, +203% vs. prior 90 days" },
   { src: analytics7, alt: "Discovery — 59,814 impressions, 13,900 members reached, +202.2% / +181.3%" },
-  
   { src: analytics5, alt: "Marianne van Groeningen — Vietnam/Portugal post with 28,719 impressions" },
   { src: analytics6, alt: "Marianne van Groeningen — 9 years married post with 10,273 impressions" },
+];
+
+const beforeAfterPairs = [
+  {
+    title: "12 Days of Working Together",
+    before: { src: ba1Before, alt: "Before — 92 post impressions, 89 followers" },
+    after: { src: ba1After, alt: "After 12 days — 19,019 post impressions (+1,056.2%), 516 followers (+151.8%)" },
+    highlights: [
+      "Post impressions: 92 → 19,019 (+1,056%)",
+      "Followers: 89 → 516 (+151.8%)",
+      "Profile viewers: 90 → 428",
+      "Search appearances: 29 → 58",
+    ],
+  },
+  {
+    title: "Content Performance Transformation",
+    before: { src: ba2Before, alt: "Before — 2,002 impressions, -59.3% vs prior 7 days" },
+    after: { src: ba2After, alt: "After — 21,680 impressions, +35.7% vs prior 28 days" },
+    highlights: [
+      "22K+ impressions in 28 days",
+      "YouTube podcast invite",
+      "2x LinkedIn Top Voice within 2 weeks",
+      "Featured on LinkedIn News India — 2 times",
+    ],
+  },
 ];
 
 function ResultsPage() {
@@ -76,6 +104,58 @@ function ResultsPage() {
               <img src={post.src} alt={post.alt} className="w-full rounded-xl bg-white" />
             </div>
           ))}
+        </div>
+
+        {/* Before & After */}
+        <div className="mt-24">
+          <div className="text-center">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary">Before & After</span>
+            <h2 className="mt-3 text-3xl font-bold text-foreground md:text-4xl">
+              The <span className="gradient-text">Transformation</span>
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+              See the measurable difference — from quiet profiles to thriving personal brands.
+            </p>
+          </div>
+
+          <div className="mt-12 space-y-16">
+            {beforeAfterPairs.map((pair, i) => (
+              <div key={i} className="glass-card rounded-3xl p-6 md:p-10">
+                <h3 className="text-center text-2xl font-bold text-foreground md:text-3xl">
+                  {pair.title}
+                </h3>
+
+                <div className="mt-8 grid gap-6 md:grid-cols-2">
+                  <div>
+                    <div className="mb-3 inline-flex rounded-full bg-muted px-4 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Before working with me
+                    </div>
+                    <div className="rounded-2xl bg-white p-2">
+                      <img src={pair.before.src} alt={pair.before.alt} className="w-full rounded-xl" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="mb-3 inline-flex rounded-full gradient-cyan px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
+                      After working with me
+                    </div>
+                    <div className="rounded-2xl bg-white p-2 glow-cyan">
+                      <img src={pair.after.src} alt={pair.after.alt} className="w-full rounded-xl" />
+                    </div>
+                  </div>
+                </div>
+
+                <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+                  {pair.highlights.map((h, j) => (
+                    <li key={j} className="flex items-start gap-2 text-sm text-foreground">
+                      <span className="mt-1 text-primary">✓</span>
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Analytics Growth */}
