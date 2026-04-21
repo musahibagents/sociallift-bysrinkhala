@@ -69,6 +69,27 @@ function ResultsPage() {
           </p>
         </div>
 
+        {/* Analytics Growth */}
+        <div className="mt-24">
+          <div className="text-center">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary">Growth Analytics</span>
+            <h2 className="mt-3 text-3xl font-bold text-foreground md:text-4xl">
+              Real Account <span className="gradient-text">Growth</span>
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+              LinkedIn analytics straight from client dashboards — impressions, followers, and engagement trending up.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {analyticsScreens.map((screen, i) => (
+              <div key={i} className="glass-card rounded-2xl p-4 transition-all hover:glow-cyan">
+                <img src={screen.src} alt={screen.alt} className="w-full rounded-xl bg-white" />
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Top Posts Grid */}
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {topPosts.map((post, i) => (
