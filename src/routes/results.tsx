@@ -1,25 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const resultBefore = "/result-before.png";
-const resultAfter = "/result-after.png";
-const resultContentPerf = "/result-content-perf.png";
-const resultNewsletter = "/result-newsletter.png";
-import post1 from "@/assets/post-1.png";
-import post2 from "@/assets/post-2.png";
-import post3 from "@/assets/post-3.png";
-import post4 from "@/assets/post-4.png";
-import post5 from "@/assets/post-5.png";
-import post6 from "@/assets/post-6.png";
-import client2Discovery from "@/assets/client2-discovery.png";
-import client2Engagements from "@/assets/client2-engagements.png";
-import client2Cumulative from "@/assets/client2-cumulative.png";
-import mariannePost1 from "@/assets/marianne-post-1.png";
-import mariannePost2 from "@/assets/marianne-post-2.png";
-import mariannePost3 from "@/assets/marianne-post-3.png";
-import client3ContentPerf from "@/assets/client3-content-perf.png";
-import client3Followers from "@/assets/client3-followers.png";
-import client3ContentPerf2 from "@/assets/client3-content-perf-2.png";
-
 export const Route = createFileRoute("/results")({
   head: () => ({
     meta: [
@@ -42,13 +22,40 @@ const highlights = [
 ];
 
 const topPosts = [
-  { src: post1, impressions: "3,346", reactions: "303", comments: "48" },
-  { src: post2, impressions: "3,501", reactions: "289", comments: "46" },
-  { src: post3, impressions: "63,967", reactions: "356", comments: "64" },
-  { src: post4, impressions: "18,435", reactions: "308", comments: "76" },
-  { src: post5, impressions: "2,207", reactions: "243", comments: "45" },
-  { src: post6, impressions: "3,930", reactions: "376", comments: "133" },
+  { impressions: "3,346", reactions: "303", comments: "48" },
+  { impressions: "3,501", reactions: "289", comments: "46" },
+  { impressions: "63,967", reactions: "356", comments: "64" },
+  { impressions: "18,435", reactions: "308", comments: "76" },
+  { impressions: "2,207", reactions: "243", comments: "45" },
+  { impressions: "3,930", reactions: "376", comments: "133" },
 ];
+
+const mariannePosts = [
+  { impressions: "28,719", reactions: "99", comments: "21" },
+  { impressions: "10,273", reactions: "96", comments: "41" },
+  { impressions: "4,772", reactions: "99", comments: "27" },
+];
+
+function StatCard({ impressions, reactions, comments }: { impressions: string; reactions: string; comments: string }) {
+  return (
+    <div className="glass-card rounded-2xl p-6 hover-lift">
+      <div className="grid grid-cols-3 gap-2 text-center">
+        <div>
+          <p className="text-xl font-extrabold gradient-text">{impressions}</p>
+          <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Impressions</p>
+        </div>
+        <div>
+          <p className="text-xl font-extrabold gradient-text">{reactions}</p>
+          <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Reactions</p>
+        </div>
+        <div>
+          <p className="text-xl font-extrabold gradient-text">{comments}</p>
+          <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Comments</p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function ResultsPage() {
   return (
@@ -83,45 +90,31 @@ function ResultsPage() {
               Before vs <span className="gradient-text">After</span>
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-              Same client. Same profile. 12 days of working with Srinkhala. Real LinkedIn analytics, untouched.
+              Same client. Same profile. 12 days of working with Srinkhala.
             </p>
           </div>
 
           <div className="mt-12 grid gap-8 md:grid-cols-2">
-            <div className="glass-card rounded-3xl p-6 hover-lift">
-              <div className="mb-4 flex items-center justify-between">
-                <span className="rounded-full bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Before
-                </span>
-                <span className="text-xs text-muted-foreground">Thursday, September 28</span>
-              </div>
-              <img
-                src={resultBefore}
-                alt="LinkedIn analytics before working with Srinkhala — 92 impressions, 89 followers"
-                className="w-full rounded-2xl"
-                loading="lazy"
-              />
-              <p className="mt-4 text-center text-sm text-muted-foreground">
-                Starting point — modest reach, low impressions, limited visibility.
-              </p>
+            <div className="glass-card rounded-3xl p-8 hover-lift text-center">
+              <span className="rounded-full bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Before
+              </span>
+              <p className="mt-6 text-5xl font-extrabold text-foreground">92</p>
+              <p className="mt-1 text-sm text-muted-foreground">Impressions</p>
+              <p className="mt-6 text-5xl font-extrabold text-foreground">89</p>
+              <p className="mt-1 text-sm text-muted-foreground">Followers</p>
+              <p className="mt-6 text-xs text-muted-foreground">Thursday, September 28</p>
             </div>
 
-            <div className="glass-card rounded-3xl p-6 glow-cyan hover-lift">
-              <div className="mb-4 flex items-center justify-between">
-                <span className="rounded-full gradient-cyan px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
-                  After 12 Days
-                </span>
-                <span className="text-xs text-muted-foreground">Monday, October 9</span>
-              </div>
-              <img
-                src={resultAfter}
-                alt="LinkedIn analytics 12 days after working with Srinkhala — 19,019 impressions, 516 followers"
-                className="w-full rounded-2xl"
-                loading="lazy"
-              />
-              <p className="mt-4 text-center text-sm font-semibold gradient-text">
-                19,019 impressions • 516 followers • 1,056% growth
-              </p>
+            <div className="glass-card rounded-3xl p-8 glow-cyan hover-lift text-center">
+              <span className="rounded-full gradient-cyan px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
+                After 12 Days
+              </span>
+              <p className="mt-6 text-5xl font-extrabold gradient-text">19,019</p>
+              <p className="mt-1 text-sm text-muted-foreground">Impressions</p>
+              <p className="mt-6 text-5xl font-extrabold gradient-text">516</p>
+              <p className="mt-1 text-sm text-muted-foreground">Followers</p>
+              <p className="mt-6 text-xs font-semibold gradient-text">+1,056% growth · Monday, October 9</p>
             </div>
           </div>
         </div>
@@ -140,28 +133,7 @@ function ResultsPage() {
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {topPosts.map((p, i) => (
-              <div key={i} className="glass-card rounded-2xl p-4 hover-lift">
-                <img
-                  src={p.src}
-                  alt={`Client top post with ${p.impressions} impressions`}
-                  className="w-full rounded-xl"
-                  loading="lazy"
-                />
-                <div className="mt-4 grid grid-cols-3 gap-2 text-center">
-                  <div>
-                    <p className="text-base font-extrabold gradient-text">{p.impressions}</p>
-                    <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Impressions</p>
-                  </div>
-                  <div>
-                    <p className="text-base font-extrabold gradient-text">{p.reactions}</p>
-                    <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Reactions</p>
-                  </div>
-                  <div>
-                    <p className="text-base font-extrabold gradient-text">{p.comments}</p>
-                    <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Comments</p>
-                  </div>
-                </div>
-              </div>
+              <StatCard key={i} {...p} />
             ))}
           </div>
         </div>
@@ -179,27 +151,15 @@ function ResultsPage() {
           </div>
 
           <div className="mt-12 grid gap-8 md:grid-cols-2">
-            <div className="glass-card rounded-3xl p-6 hover-lift">
-              <img
-                src={resultContentPerf}
-                alt="Content performance — 35,529 impressions over 28 days, 36.7% growth"
-                className="w-full rounded-2xl"
-                loading="lazy"
-              />
-              <p className="mt-4 text-center text-sm text-muted-foreground">
-                35,529 impressions in 28 days — <span className="font-semibold text-foreground">+36.7%</span> vs prior month.
-              </p>
+            <div className="glass-card rounded-3xl p-8 hover-lift text-center">
+              <p className="text-5xl font-extrabold gradient-text">35,529</p>
+              <p className="mt-2 text-sm text-muted-foreground">Impressions in 28 days</p>
+              <p className="mt-4 text-sm font-semibold text-foreground">+36.7% vs prior month</p>
             </div>
-            <div className="glass-card rounded-3xl p-6 hover-lift">
-              <img
-                src={resultNewsletter}
-                alt="Analytics with newsletter growth — 8,013 impressions, 5,211 followers, 3,150% newsletter article views"
-                className="w-full rounded-2xl"
-                loading="lazy"
-              />
-              <p className="mt-4 text-center text-sm text-muted-foreground">
-                Newsletter article views up <span className="font-semibold text-foreground">3,150%</span> in 7 days.
-              </p>
+            <div className="glass-card rounded-3xl p-8 hover-lift text-center">
+              <p className="text-5xl font-extrabold gradient-text">3,150%</p>
+              <p className="mt-2 text-sm text-muted-foreground">Newsletter article views growth</p>
+              <p className="mt-4 text-sm font-semibold text-foreground">In just 7 days</p>
             </div>
           </div>
         </div>
@@ -217,40 +177,23 @@ function ResultsPage() {
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client2Discovery} alt="Discovery — 35,615 impressions, 12,843 members reached" className="w-full rounded-xl" loading="lazy" />
-              <p className="mt-3 text-center text-xs text-muted-foreground">
-                <span className="font-semibold gradient-text">35,615</span> impressions · <span className="font-semibold gradient-text">+73.2%</span> reach
-              </p>
+            <div className="glass-card rounded-2xl p-6 text-center hover-lift">
+              <p className="text-3xl font-extrabold gradient-text">35,615</p>
+              <p className="mt-2 text-xs text-muted-foreground">Impressions · +73.2% reach</p>
             </div>
-            <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client2Engagements} alt="Content performance — 4,951 engagements, 29.4% growth" className="w-full rounded-xl" loading="lazy" />
-              <p className="mt-3 text-center text-xs text-muted-foreground">
-                <span className="font-semibold gradient-text">4,951</span> engagements · <span className="font-semibold gradient-text">+29.4%</span> in 90 days
-              </p>
+            <div className="glass-card rounded-2xl p-6 text-center hover-lift">
+              <p className="text-3xl font-extrabold gradient-text">4,951</p>
+              <p className="mt-2 text-xs text-muted-foreground">Engagements · +29.4% in 90 days</p>
             </div>
-            <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client2Cumulative} alt="Cumulative content performance — 97,575 impressions over 365 days" className="w-full rounded-xl" loading="lazy" />
-              <p className="mt-3 text-center text-xs text-muted-foreground">
-                <span className="font-semibold gradient-text">97,575</span> cumulative impressions
-              </p>
+            <div className="glass-card rounded-2xl p-6 text-center hover-lift">
+              <p className="text-3xl font-extrabold gradient-text">97,575</p>
+              <p className="mt-2 text-xs text-muted-foreground">Cumulative impressions</p>
             </div>
           </div>
 
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {[
-              { src: mariannePost1, impressions: "28,719", reactions: "99", comments: "21" },
-              { src: mariannePost2, impressions: "10,273", reactions: "96", comments: "41" },
-              { src: mariannePost3, impressions: "4,772", reactions: "99", comments: "27" },
-            ].map((p, i) => (
-              <div key={i} className="glass-card rounded-2xl p-4 hover-lift">
-                <img src={p.src} alt={`Marianne post — ${p.impressions} impressions`} className="w-full rounded-xl" loading="lazy" />
-                <div className="mt-3 grid grid-cols-3 gap-2 text-center">
-                  <div><p className="text-base font-extrabold gradient-text">{p.impressions}</p><p className="text-[10px] uppercase tracking-wider text-muted-foreground">Impressions</p></div>
-                  <div><p className="text-base font-extrabold gradient-text">{p.reactions}</p><p className="text-[10px] uppercase tracking-wider text-muted-foreground">Reactions</p></div>
-                  <div><p className="text-base font-extrabold gradient-text">{p.comments}</p><p className="text-[10px] uppercase tracking-wider text-muted-foreground">Comments</p></div>
-                </div>
-              </div>
+            {mariannePosts.map((p, i) => (
+              <StatCard key={i} {...p} />
             ))}
           </div>
         </div>
@@ -268,23 +211,17 @@ function ResultsPage() {
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client3ContentPerf} alt="Content performance — 199,450 impressions over a year" className="w-full rounded-xl" loading="lazy" />
-              <p className="mt-3 text-center text-xs text-muted-foreground">
-                <span className="font-semibold gradient-text">199,450</span> impressions over 12 months
-              </p>
+            <div className="glass-card rounded-2xl p-6 text-center hover-lift">
+              <p className="text-3xl font-extrabold gradient-text">199,450</p>
+              <p className="mt-2 text-xs text-muted-foreground">Impressions over 12 months</p>
             </div>
-            <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client3Followers} alt="4,105 total followers, 20% growth in 90 days" className="w-full rounded-xl" loading="lazy" />
-              <p className="mt-3 text-center text-xs text-muted-foreground">
-                <span className="font-semibold gradient-text">4,105</span> followers · <span className="font-semibold gradient-text">+20%</span> in 90 days
-              </p>
+            <div className="glass-card rounded-2xl p-6 text-center hover-lift">
+              <p className="text-3xl font-extrabold gradient-text">4,105</p>
+              <p className="mt-2 text-xs text-muted-foreground">Followers · +20% in 90 days</p>
             </div>
-            <div className="glass-card rounded-2xl p-5 hover-lift">
-              <img src={client3ContentPerf2} alt="Content performance — 59,953 impressions, 203% growth vs prior 90 days" className="w-full rounded-xl" loading="lazy" />
-              <p className="mt-3 text-center text-xs text-muted-foreground">
-                <span className="font-semibold gradient-text">59,953</span> impressions · <span className="font-semibold gradient-text">+203%</span> in 90 days
-              </p>
+            <div className="glass-card rounded-2xl p-6 text-center hover-lift">
+              <p className="text-3xl font-extrabold gradient-text">59,953</p>
+              <p className="mt-2 text-xs text-muted-foreground">Impressions · +203% in 90 days</p>
             </div>
           </div>
         </div>
