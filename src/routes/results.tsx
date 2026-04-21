@@ -8,6 +8,15 @@ import resultPost6 from "@/assets/result-post-6.png";
 import resultPost7 from "@/assets/result-post-7.png";
 import resultPost8 from "@/assets/result-post-8.png";
 import resultPost9 from "@/assets/result-post-9.png";
+import analytics1 from "@/assets/analytics-1.png";
+import analytics2 from "@/assets/analytics-2.png";
+import analytics3 from "@/assets/analytics-3.png";
+import analytics4 from "@/assets/analytics-4.png";
+import analytics5 from "@/assets/analytics-5.png";
+import analytics6 from "@/assets/analytics-6.png";
+import analytics7 from "@/assets/analytics-7.png";
+import analytics8 from "@/assets/analytics-8.png";
+import analytics9 from "@/assets/analytics-9.png";
 
 export const Route = createFileRoute("/results")({
   head: () => ({
@@ -31,6 +40,18 @@ const topPosts = [
   { src: resultPost2, alt: "Client LinkedIn post — 3,501 impressions, 289 reactions, 46 comments, 1 repost" },
   { src: resultPost1, alt: "Client LinkedIn post — 3,346 impressions, 304 reactions, 48 comments, 1 repost" },
   { src: resultPost5, alt: "Client LinkedIn post — 2,207 impressions, 244 reactions, 45 comments, 1 repost" },
+];
+
+const analyticsScreens = [
+  { src: analytics1, alt: "Content performance — 35,529 impressions, +36.7% vs. prior 28 days" },
+  { src: analytics3, alt: "Discovery — 35,615 impressions, 12,843 members reached, +37.1% / +73.2%" },
+  { src: analytics2, alt: "Analytics overview — 8,013 post impressions, 5,211 followers, 1,772 profile viewers" },
+  { src: analytics4, alt: "Content performance — 4,951 engagements, +29.4% vs. prior 90 days" },
+  { src: analytics8, alt: "Content performance — 59,953 impressions, +203% vs. prior 90 days" },
+  { src: analytics7, alt: "Discovery — 59,814 impressions, 13,900 members reached, +202.2% / +181.3%" },
+  { src: analytics9, alt: "Content performance — 2,002 impressions in past 7 days" },
+  { src: analytics5, alt: "Marianne van Groeningen — Vietnam/Portugal post with 28,719 impressions" },
+  { src: analytics6, alt: "Marianne van Groeningen — 9 years married post with 10,273 impressions" },
 ];
 
 function ResultsPage() {
