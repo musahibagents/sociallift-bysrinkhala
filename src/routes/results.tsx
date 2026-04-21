@@ -16,7 +16,7 @@ import analytics5 from "@/assets/analytics-5.png";
 import analytics6 from "@/assets/analytics-6.png";
 import analytics7 from "@/assets/analytics-7.png";
 import analytics8 from "@/assets/analytics-8.png";
-import analytics9 from "@/assets/analytics-9.png";
+
 
 export const Route = createFileRoute("/results")({
   head: () => ({
@@ -49,7 +49,7 @@ const analyticsScreens = [
   { src: analytics4, alt: "Content performance — 4,951 engagements, +29.4% vs. prior 90 days" },
   { src: analytics8, alt: "Content performance — 59,953 impressions, +203% vs. prior 90 days" },
   { src: analytics7, alt: "Discovery — 59,814 impressions, 13,900 members reached, +202.2% / +181.3%" },
-  { src: analytics9, alt: "Content performance — 2,002 impressions in past 7 days" },
+  
   { src: analytics5, alt: "Marianne van Groeningen — Vietnam/Portugal post with 28,719 impressions" },
   { src: analytics6, alt: "Marianne van Groeningen — 9 years married post with 10,273 impressions" },
 ];
