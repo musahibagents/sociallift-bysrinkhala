@@ -69,6 +69,15 @@ function ResultsPage() {
           </p>
         </div>
 
+        {/* Top Posts Grid */}
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {topPosts.map((post, i) => (
+            <div key={i} className="glass-card rounded-2xl p-4 transition-all hover:glow-cyan">
+              <img src={post.src} alt={post.alt} className="w-full rounded-xl bg-white" />
+            </div>
+          ))}
+        </div>
+
         {/* Analytics Growth */}
         <div className="mt-24">
           <div className="text-center">
@@ -88,15 +97,6 @@ function ResultsPage() {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Top Posts Grid */}
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {topPosts.map((post, i) => (
-            <div key={i} className="glass-card rounded-2xl p-4 transition-all hover:glow-cyan">
-              <img src={post.src} alt={post.alt} className="w-full rounded-xl bg-white" />
-            </div>
-          ))}
         </div>
 
         {/* CTA */}
