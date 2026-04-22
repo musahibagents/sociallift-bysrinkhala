@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import resultPost1 from "@/assets/result-post-1.png";
-import resultPost2 from "@/assets/result-post-2.png";
-import resultPost3 from "@/assets/result-post-3.png";
-import resultPost4 from "@/assets/result-post-4.png";
-import resultPost5 from "@/assets/result-post-5.png";
-import resultPost6 from "@/assets/result-post-6.png";
-import resultPost7 from "@/assets/result-post-7.png";
-import resultPost8 from "@/assets/result-post-8.png";
-import resultPost9 from "@/assets/result-post-9.png";
+import post1 from "@/assets/post-1.png";
+import post2 from "@/assets/post-2.png";
+import post3 from "@/assets/post-3.png";
+import post4 from "@/assets/post-4.png";
+import post5 from "@/assets/post-5.png";
+import post6 from "@/assets/post-6.png";
+import mariannePost1 from "@/assets/marianne-post-1.png";
+import mariannePost2 from "@/assets/marianne-post-2.png";
+import mariannePost3 from "@/assets/marianne-post-3.png";
 import analytics1 from "@/assets/analytics-1.png";
 import analytics2 from "@/assets/analytics-2.png";
 import analytics3 from "@/assets/analytics-3.png";
@@ -20,7 +20,6 @@ import ba1Before from "@/assets/before-after-1-before.png";
 import ba1After from "@/assets/before-after-1-after.png";
 import ba2Before from "@/assets/before-after-2-before.png";
 import ba2After from "@/assets/before-after-2-after.png";
-
 
 export const Route = createFileRoute("/results")({
   head: () => ({
@@ -35,44 +34,44 @@ export const Route = createFileRoute("/results")({
 });
 
 const topPosts = [
-  { src: resultPost9, alt: "Client LinkedIn post — 123,747 impressions, 1,116 reactions, 92 comments, 223 reposts" },
-  { src: resultPost3, alt: "Client LinkedIn post — 63,967 impressions, 357 reactions, 64 comments, 7 reposts" },
-  { src: resultPost4, alt: "Client LinkedIn post — 18,435 impressions, 308 reactions, 76 comments, 3 reposts" },
-  { src: resultPost7, alt: "Client LinkedIn post — 13,855 impressions, 131 reactions, 88 comments, 27 reposts" },
-  { src: resultPost8, alt: "Client LinkedIn post — 7,273 impressions, 110 reactions, 82 comments, 11 reposts" },
-  { src: resultPost6, alt: "Client LinkedIn post — 3,930 impressions, 377 reactions, 133 comments, 4 reposts" },
-  { src: resultPost2, alt: "Client LinkedIn post — 3,501 impressions, 289 reactions, 46 comments, 1 repost" },
-  { src: resultPost1, alt: "Client LinkedIn post — 3,346 impressions, 304 reactions, 48 comments, 1 repost" },
-  { src: resultPost5, alt: "Client LinkedIn post — 2,207 impressions, 244 reactions, 45 comments, 1 repost" },
+  { src: post1, alt: "Client LinkedIn post performance" },
+  { src: post2, alt: "Client LinkedIn post performance" },
+  { src: post3, alt: "Client LinkedIn post performance" },
+  { src: post4, alt: "Client LinkedIn post performance" },
+  { src: post5, alt: "Client LinkedIn post performance" },
+  { src: post6, alt: "Client LinkedIn post performance" },
+  { src: mariannePost1, alt: "Client LinkedIn post performance" },
+  { src: mariannePost2, alt: "Client LinkedIn post performance" },
+  { src: mariannePost3, alt: "Client LinkedIn post performance" },
 ];
 
 const analyticsScreens = [
-  { src: analytics1, alt: "Content performance — 35,529 impressions, +36.7% vs. prior 28 days" },
-  { src: analytics3, alt: "Discovery — 35,615 impressions, 12,843 members reached, +37.1% / +73.2%" },
-  { src: analytics2, alt: "Analytics overview — 8,013 post impressions, 5,211 followers, 1,772 profile viewers" },
-  { src: analytics4, alt: "Content performance — 4,951 engagements, +29.4% vs. prior 90 days" },
-  { src: analytics8, alt: "Content performance — 59,953 impressions, +203% vs. prior 90 days" },
-  { src: analytics7, alt: "Discovery — 59,814 impressions, 13,900 members reached, +202.2% / +181.3%" },
-  { src: analytics5, alt: "Marianne van Groeningen — Vietnam/Portugal post with 28,719 impressions" },
-  { src: analytics6, alt: "Marianne van Groeningen — 9 years married post with 10,273 impressions" },
+  { src: analytics1, alt: "LinkedIn analytics — content performance growth" },
+  { src: analytics2, alt: "LinkedIn analytics overview — impressions and followers" },
+  { src: analytics3, alt: "LinkedIn analytics — discovery and reach" },
+  { src: analytics4, alt: "LinkedIn analytics — engagement growth" },
+  { src: analytics5, alt: "LinkedIn analytics — top post performance" },
+  { src: analytics6, alt: "LinkedIn analytics — post impressions" },
+  { src: analytics7, alt: "LinkedIn analytics — discovery growth" },
+  { src: analytics8, alt: "LinkedIn analytics — content performance trending up" },
 ];
 
 const beforeAfterPairs = [
   {
     title: "12 Days of Working Together",
-    before: { src: ba1Before, alt: "Before — 92 post impressions, 89 followers" },
-    after: { src: ba1After, alt: "After 12 days — 19,019 post impressions (+1,056.2%), 516 followers (+151.8%)" },
+    before: { src: ba1Before, alt: "Before working together — baseline LinkedIn analytics" },
+    after: { src: ba1After, alt: "After 12 days of working together — significant growth" },
     highlights: [
-      "Post impressions: 92 → 19,019 (+1,056%)",
-      "Followers: 89 → 516 (+151.8%)",
-      "Profile viewers: 90 → 428",
-      "Search appearances: 29 → 58",
+      "Massive jump in post impressions",
+      "Follower count multiplied",
+      "Profile views surged",
+      "Search appearances doubled",
     ],
   },
   {
     title: "Content Performance Transformation",
-    before: { src: ba2Before, alt: "Before — 2,002 impressions, -59.3% vs prior 7 days" },
-    after: { src: ba2After, alt: "After — 21,680 impressions, +35.7% vs prior 28 days" },
+    before: { src: ba2Before, alt: "Before — flat content performance" },
+    after: { src: ba2After, alt: "After — content performance transformation" },
     highlights: [
       "22K+ impressions in 28 days",
       "YouTube podcast invite",
