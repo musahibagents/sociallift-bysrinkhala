@@ -34,15 +34,15 @@ export const Route = createFileRoute("/results")({
 });
 
 const topPosts = [
-  { src: post1, alt: "Client LinkedIn post performance" },
-  { src: post2, alt: "Client LinkedIn post performance" },
-  { src: post3, alt: "Client LinkedIn post performance" },
-  { src: post4, alt: "Client LinkedIn post performance" },
-  { src: post5, alt: "Client LinkedIn post performance" },
-  { src: post6, alt: "Client LinkedIn post performance" },
-  { src: mariannePost1, alt: "Client LinkedIn post performance" },
-  { src: mariannePost2, alt: "Client LinkedIn post performance" },
-  { src: mariannePost3, alt: "Client LinkedIn post performance" },
+  { src: post1, alt: "Client LinkedIn post — high engagement" },
+  { src: post2, alt: "Client LinkedIn post — high engagement" },
+  { src: post3, alt: "Client LinkedIn post — high engagement" },
+  { src: post4, alt: "Client LinkedIn post — high engagement" },
+  { src: post5, alt: "Client LinkedIn post — high engagement" },
+  { src: post6, alt: "Client LinkedIn post — high engagement" },
+  { src: mariannePost1, alt: "Client LinkedIn post — high engagement" },
+  { src: mariannePost2, alt: "Client LinkedIn post — high engagement" },
+  { src: mariannePost3, alt: "Client LinkedIn post — high engagement" },
 ];
 
 const analyticsScreens = [
