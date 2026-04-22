@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import post1 from "@/assets/post-1.png";
-import post2 from "@/assets/post-2.png";
-import post3 from "@/assets/post-3.png";
-import post4 from "@/assets/post-4.png";
-import post5 from "@/assets/post-5.png";
-import post6 from "@/assets/post-6.png";
-import mariannePost1 from "@/assets/marianne-post-1.png";
-import mariannePost2 from "@/assets/marianne-post-2.png";
-import mariannePost3 from "@/assets/marianne-post-3.png";
+import topPost1 from "@/assets/top-post-1.png";
+import topPost2 from "@/assets/top-post-2.png";
+import topPost3 from "@/assets/top-post-3.png";
+import topPost4 from "@/assets/top-post-4.png";
+import topPost5 from "@/assets/top-post-5.png";
+import topPost6 from "@/assets/top-post-6.png";
+import topPost7 from "@/assets/top-post-7.png";
+import topPost8 from "@/assets/top-post-8.png";
+import topPost9 from "@/assets/top-post-9.png";
 import analytics1 from "@/assets/analytics-1.png";
 import analytics2 from "@/assets/analytics-2.png";
 import analytics3 from "@/assets/analytics-3.png";
@@ -34,15 +34,15 @@ export const Route = createFileRoute("/results")({
 });
 
 const topPosts = [
-  { src: post1, alt: "Client LinkedIn post — high engagement" },
-  { src: post2, alt: "Client LinkedIn post — high engagement" },
-  { src: post3, alt: "Client LinkedIn post — high engagement" },
-  { src: post4, alt: "Client LinkedIn post — high engagement" },
-  { src: post5, alt: "Client LinkedIn post — high engagement" },
-  { src: post6, alt: "Client LinkedIn post — high engagement" },
-  { src: mariannePost1, alt: "Client LinkedIn post — high engagement" },
-  { src: mariannePost2, alt: "Client LinkedIn post — high engagement" },
-  { src: mariannePost3, alt: "Client LinkedIn post — high engagement" },
+  { src: topPost1, alt: "Client LinkedIn post — high engagement" },
+  { src: topPost2, alt: "Client LinkedIn post — high engagement" },
+  { src: topPost3, alt: "Client LinkedIn post — high engagement" },
+  { src: topPost4, alt: "Client LinkedIn post — high engagement" },
+  { src: topPost5, alt: "Client LinkedIn post — high engagement" },
+  { src: topPost6, alt: "Client LinkedIn post — high engagement" },
+  { src: topPost7, alt: "Client LinkedIn post — high engagement" },
+  { src: topPost8, alt: "Client LinkedIn post — high engagement" },
+  { src: topPost9, alt: "Client LinkedIn post — high engagement" },
 ];
 
 const analyticsScreens = [
