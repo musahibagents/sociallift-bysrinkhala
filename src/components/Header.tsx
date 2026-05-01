@@ -37,12 +37,14 @@ export function Header() {
           ))}
         </nav>
 
-        <Link
-          to="/contact"
+        <a
+          href="https://calendly.com/srinkhalab1998"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden rounded-lg gradient-cyan px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 glow-cyan md:inline-flex"
         >
           Book a Call
-        </Link>
+        </a>
 
         <button
           className="flex flex-col gap-1.5 md:hidden"
@@ -69,13 +71,15 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            to="/contact"
+          <a
+            href="https://calendly.com/srinkhalab1998"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
             className="mt-2 rounded-lg gradient-cyan px-5 py-2.5 text-center text-sm font-semibold text-primary-foreground"
           >
             Book a Call
-          </Link>
+          </a>
         </nav>
       )}
     </header>
