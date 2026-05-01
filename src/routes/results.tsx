@@ -8,6 +8,7 @@ import topPost6 from "@/assets/top-post-6.png";
 import topPost7 from "@/assets/top-post-7.png";
 import topPost8 from "@/assets/top-post-8.png";
 import topPost9 from "@/assets/top-post-9.png";
+import topPost10 from "@/assets/top-post-10.png";
 import analytics1 from "@/assets/analytics-1.png";
 import analytics2 from "@/assets/analytics-2.png";
 import analytics3 from "@/assets/analytics-3.png";
@@ -34,15 +35,16 @@ export const Route = createFileRoute("/results")({
 });
 
 const topPosts = [
-  { src: topPost1, alt: "Client LinkedIn post — high engagement" },
-  { src: topPost2, alt: "Client LinkedIn post — high engagement" },
-  { src: topPost3, alt: "Client LinkedIn post — high engagement" },
-  { src: topPost4, alt: "Client LinkedIn post — high engagement" },
-  { src: topPost5, alt: "Client LinkedIn post — high engagement" },
-  { src: topPost6, alt: "Client LinkedIn post — high engagement" },
-  { src: topPost7, alt: "Client LinkedIn post — high engagement" },
-  { src: topPost8, alt: "Client LinkedIn post — high engagement" },
-  { src: topPost9, alt: "Client LinkedIn post — high engagement" },
+  { src: topPost1, alt: "Client LinkedIn post — 63,967 impressions, 356+ reactions, 64 comments" },
+  { src: topPost2, alt: "Client LinkedIn post — 31,253 impressions, 162 comments" },
+  { src: topPost3, alt: "Client LinkedIn post — 63,967 impressions, 64 comments" },
+  { src: topPost4, alt: "Client LinkedIn post — 18,435 impressions, 76 comments" },
+  { src: topPost5, alt: "Client LinkedIn post — 8,275 impressions, 90 comments" },
+  { src: topPost6, alt: "Client LinkedIn post — 13,855 impressions, 88 comments" },
+  { src: topPost7, alt: "Client LinkedIn post — 7,273 impressions, 82 comments" },
+  { src: topPost8, alt: "Client LinkedIn post — 10,145 impressions, 71 comments" },
+  { src: topPost9, alt: "Client LinkedIn post — 8,751 impressions, 65 comments" },
+  { src: topPost10, alt: "Client LinkedIn post — 123,747 impressions, 1,116 reactions, 92 comments" },
 ];
 
 const analyticsScreens = [
