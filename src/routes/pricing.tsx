@@ -3,10 +3,10 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Plans & Packages — Social Lift by Srinkhala" },
-      { name: "description", content: "LinkedIn personal branding packages: ghostwriting, management, profile optimization, lead generation, and more." },
-      { property: "og:title", content: "Plans & Packages — Social Lift by Srinkhala" },
-      { property: "og:description", content: "LinkedIn personal branding packages by Srinkhala." },
+      { title: "Plans — Social Lift by Srinkhala" },
+      { name: "description", content: "LinkedIn personal branding plans: ghostwriting, management, profile optimization, lead generation, and more." },
+      { property: "og:title", content: "Plans — Social Lift by Srinkhala" },
+      { property: "og:description", content: "LinkedIn personal branding plans by Srinkhala." },
     ],
   }),
   component: PricingPage,
@@ -215,10 +215,10 @@ function PricingPage() {
         <div className="text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-primary">Pricing</span>
           <h1 className="mt-3 text-4xl font-bold text-foreground md:text-6xl">
-            Plans & <span className="gradient-text">Packages</span>
+            <span className="gradient-text">Plans</span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Curated packages designed for founders, coaches, and creators. Every plan includes a dedicated personal branding strategist — Srinkhala herself. Book a call to get a custom quote.
+            Curated plans designed for founders, coaches, and creators. Every plan includes a dedicated personal branding strategist — Srinkhala herself. Book a call to get a custom quote.
           </p>
         </div>
 
