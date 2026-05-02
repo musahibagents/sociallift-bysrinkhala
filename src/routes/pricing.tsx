@@ -15,7 +15,6 @@ export const Route = createFileRoute("/pricing")({
 const ghostwritingPlans = [
   {
     name: "Starter",
-    price: "$299",
     features: [
       "Onboarding & Brand Voice Discovery",
       "Content Strategy",
@@ -26,7 +25,6 @@ const ghostwritingPlans = [
   },
   {
     name: "Growth",
-    price: "$399",
     popular: true,
     features: [
       "Onboarding & Brand Voice Discovery",
@@ -40,7 +38,6 @@ const ghostwritingPlans = [
   },
   {
     name: "Scale",
-    price: "$499",
     features: [
       "Onboarding & Brand Voice Discovery",
       "Content Strategy",
