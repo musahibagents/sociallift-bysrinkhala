@@ -10,6 +10,7 @@ export function Header() {
     { to: "/", label: "Home" },
     { to: "/pricing", label: "Plans & Packages" },
     { to: "/results", label: "Results" },
+    { to: "/about", label: "About" },
     { to: "/contact", label: "Contact Us" },
   ] as const;
 

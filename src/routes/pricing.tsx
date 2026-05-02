@@ -15,7 +15,6 @@ export const Route = createFileRoute("/pricing")({
 const ghostwritingPlans = [
   {
     name: "Starter",
-    price: "$299",
     features: [
       "Onboarding & Brand Voice Discovery",
       "Content Strategy",
@@ -26,7 +25,6 @@ const ghostwritingPlans = [
   },
   {
     name: "Growth",
-    price: "$399",
     popular: true,
     features: [
       "Onboarding & Brand Voice Discovery",
@@ -40,7 +38,6 @@ const ghostwritingPlans = [
   },
   {
     name: "Scale",
-    price: "$499",
     features: [
       "Onboarding & Brand Voice Discovery",
       "Content Strategy",
@@ -57,7 +54,6 @@ const ghostwritingPlans = [
 const managementPlans = [
   {
     name: "Essential",
-    price: "$699",
     features: [
       "Onboarding & Brand Strategy",
       "Content Strategy",
@@ -70,7 +66,6 @@ const managementPlans = [
   },
   {
     name: "Professional",
-    price: "$819",
     popular: true,
     features: [
       "Onboarding & Brand Strategy",
@@ -85,7 +80,6 @@ const managementPlans = [
   },
   {
     name: "Premium",
-    price: "$1,099",
     features: [
       "Onboarding & Brand Strategy",
       "Content Strategy",
@@ -103,8 +97,6 @@ const managementPlans = [
 const addOns = [
   {
     name: "Profile Optimization",
-    price: "$249",
-    period: "One-time",
     features: [
       "2 LinkedIn Banners",
       "2 Featured Section Cards",
@@ -118,8 +110,6 @@ const addOns = [
   },
   {
     name: "Organic Lead Generation",
-    price: "$449",
-    period: "/Month + 15% commission on closing",
     features: [
       "5 Days (5+5) Warm & Cold Outreach",
       "Focus on Your Target Audience",
@@ -127,13 +117,10 @@ const addOns = [
       "Audience Pain Point Research",
       "Custom Connection Request Messages",
       "Follow up Sequence",
-      "15% Commission on Every Deal Closed",
     ],
   },
   {
     name: "Content Design Package",
-    price: "$599",
-    period: "/Month",
     features: [
       "12 Custom Designs",
       "Carousels + Cheatsheets + Infographics",
@@ -144,8 +131,6 @@ const addOns = [
   },
   {
     name: "LinkedIn Audit & Strategy",
-    price: "$149",
-    period: "One-time",
     features: [
       "Complete Profile Audit",
       "Competitor Analysis",
@@ -157,8 +142,6 @@ const addOns = [
   },
   {
     name: "Personal Brand Coaching",
-    price: "$399",
-    period: "/Month",
     features: [
       "4 x 1 on 1 Coaching Calls",
       "Brand Positioning Framework",
@@ -170,8 +153,6 @@ const addOns = [
   },
   {
     name: "Newsletter Ghostwriting",
-    price: "$299",
-    period: "/Month",
     features: [
       "4 LinkedIn Newsletters/Month",
       "Topic Research & Planning",
@@ -182,8 +163,6 @@ const addOns = [
   },
   {
     name: "LinkedIn Engagement",
-    price: "$250",
-    period: "/Month",
     features: [
       "30 Thoughtful Comments/Month",
       "Finding the Right Audience for Engagement",
@@ -196,7 +175,7 @@ const addOns = [
   },
 ];
 
-function PricingCard({ plan, period = "/Month" }: { plan: { name: string; price: string; features: string[]; popular?: boolean }; period?: string }) {
+function PricingCard({ plan }: { plan: { name: string; features: string[]; popular?: boolean } }) {
   return (
     <div className={`glass-card rounded-2xl p-8 hover-lift relative ${plan.popular ? "ring-2 ring-primary glow-cyan" : ""}`}>
       {plan.popular && (
@@ -205,10 +184,6 @@ function PricingCard({ plan, period = "/Month" }: { plan: { name: string; price:
         </span>
       )}
       <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
-      <div className="mt-4">
-        <span className="text-4xl font-extrabold gradient-text">{plan.price}</span>
-        <span className="text-muted-foreground">{period}</span>
-      </div>
       <ul className="mt-6 space-y-3">
         {plan.features.map((f) => (
           <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -243,7 +218,7 @@ function PricingPage() {
             Plans & <span className="gradient-text">Packages</span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Transparent pricing with no hidden fees. Every plan includes a dedicated personal branding strategist, Srinkhala herself.
+            Curated packages designed for founders, coaches, and creators. Every plan includes a dedicated personal branding strategist — Srinkhala herself. Book a call to get a custom quote.
           </p>
         </div>
 
@@ -270,10 +245,6 @@ function PricingPage() {
             {addOns.map((a) => (
               <div key={a.name} className="glass-card rounded-2xl p-8 hover-lift">
                 <h3 className="text-xl font-bold text-foreground">{a.name}</h3>
-                <div className="mt-4">
-                  <span className="text-4xl font-extrabold gradient-text">{a.price}</span>
-                  <span className="text-muted-foreground"> {a.period}</span>
-                </div>
                 <ul className="mt-6 space-y-3">
                   {a.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -299,8 +270,7 @@ function PricingPage() {
         <div className="mt-20 glass-card rounded-3xl p-10 text-center">
           <h3 className="text-xl font-bold text-foreground">💡 Why Choose Social Lift?</h3>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground leading-relaxed">
-            Most LinkedIn agencies charge $1,500 to $3,000/month for similar services. Freelance ghostwriters typically charge $500 to $1,000/month for just 3 posts/week.
-            With Social Lift, you get agency quality work at freelancer friendly prices, plus a personal branding strategist who genuinely cares about your growth.
+            You get agency-quality work paired with a personal branding strategist who genuinely cares about your growth — without the bloated agency overhead. Hop on a quick call and we'll tailor a plan to your goals and budget.
           </p>
         </div>
       </div>
